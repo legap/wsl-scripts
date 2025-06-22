@@ -32,11 +32,3 @@ echo "Installing golang-go apt package"
 echo "--------------------------------------------------------------------------------"
 sudo apt-get update
 sudo apt-get install -y golang-go
-
-echo "--------------------------------------------------------------------------------"
-echo "Configure environment variables for go"
-echo "--------------------------------------------------------------------------------"
-sudo tee /etc/profile.d/golang-config.sh <<EOT
-export GOPROXY="https://repo.pnet.ch/artifactory/api/go/go"
-export GOPRIVATE="*.pnet.ch"
-EOT
